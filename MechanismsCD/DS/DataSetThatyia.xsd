@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetThatyia" targetNamespace="http://tempuri.org/DataSetThatyia.xsd" xmlns:mstns="http://tempuri.org/DataSetThatyia.xsd" xmlns="http://tempuri.org/DataSetThatyia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetThatyia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetThatyia" msprop:Generator_UserDSName="DataSetThatyia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrintDocument" msprop:Generator_TableClassName="PrintDocumentDataTable" msprop:Generator_TableVarName="tablePrintDocument" msprop:Generator_RowChangedName="PrintDocumentRowChanged" msprop:Generator_TablePropName="PrintDocument" msprop:Generator_RowDeletingName="PrintDocumentRowDeleting" msprop:Generator_RowChangingName="PrintDocumentRowChanging" msprop:Generator_RowEvHandlerName="PrintDocumentRowChangeEventHandler" msprop:Generator_RowDeletedName="PrintDocumentRowDeleted" msprop:Generator_RowClassName="PrintDocumentRow" msprop:Generator_UserTableName="PrintDocument" msprop:Generator_RowEvArgName="PrintDocumentRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookNo" msprop:Generator_ColumnVarNameInTable="columnBookNo" msprop:Generator_ColumnPropNameInRow="BookNo" msprop:Generator_ColumnPropNameInTable="BookNoColumn" msprop:Generator_UserColumnName="BookNo" type="xs:string" minOccurs="0" />
+              <xs:element name="BookDate" msprop:Generator_ColumnVarNameInTable="columnBookDate" msprop:Generator_ColumnPropNameInRow="BookDate" msprop:Generator_ColumnPropNameInTable="BookDateColumn" msprop:Generator_UserColumnName="BookDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HijriDay" msprop:Generator_ColumnVarNameInTable="columnHijriDay" msprop:Generator_ColumnPropNameInRow="HijriDay" msprop:Generator_ColumnPropNameInTable="HijriDayColumn" msprop:Generator_UserColumnName="HijriDay" type="xs:string" minOccurs="0" />
+              <xs:element name="HijriMonth" msprop:Generator_ColumnVarNameInTable="columnHijriMonth" msprop:Generator_ColumnPropNameInRow="HijriMonth" msprop:Generator_ColumnPropNameInTable="HijriMonthColumn" msprop:Generator_UserColumnName="HijriMonth" type="xs:string" minOccurs="0" />
+              <xs:element name="HijriYear" msprop:Generator_ColumnVarNameInTable="columnHijriYear" msprop:Generator_ColumnPropNameInRow="HijriYear" msprop:Generator_ColumnPropNameInTable="HijriYearColumn" msprop:Generator_UserColumnName="HijriYear" type="xs:string" minOccurs="0" />
+              <xs:element name="BookTitle" msprop:Generator_ColumnVarNameInTable="columnBookTitle" msprop:Generator_ColumnPropNameInRow="BookTitle" msprop:Generator_ColumnPropNameInTable="BookTitleColumn" msprop:Generator_UserColumnName="BookTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDe" msprop:Generator_ColumnVarNameInTable="columnToDe" msprop:Generator_ColumnPropNameInRow="ToDe" msprop:Generator_ColumnPropNameInTable="ToDeColumn" msprop:Generator_UserColumnName="ToDe" type="xs:string" minOccurs="0" />
+              <xs:element name="BookDetails" msprop:Generator_ColumnVarNameInTable="columnBookDetails" msprop:Generator_ColumnPropNameInRow="BookDetails" msprop:Generator_ColumnPropNameInTable="BookDetailsColumn" msprop:Generator_UserColumnName="BookDetails" type="xs:string" minOccurs="0" />
+              <xs:element name="Murfaqat" msprop:Generator_ColumnVarNameInTable="columnMurfaqat" msprop:Generator_ColumnPropNameInRow="Murfaqat" msprop:Generator_ColumnPropNameInTable="MurfaqatColumn" msprop:Generator_UserColumnName="Murfaqat" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

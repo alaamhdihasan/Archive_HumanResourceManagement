@@ -1,0 +1,1631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCF42C21-CCD4-4A58-83B5-5BA3B20370D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MechanismsCD</RootNamespace>
+    <AssemblyName>MechanismsCD</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NewProject|AnyCPU'">
+    <OutputPath>bin\NewProject\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Fruityth1ng-Stark-HD.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="asprise-scan-scanner-twain-wia-api, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\asprise-scan-scanner-twain-wia-api.12.0.0.0\lib\net40\asprise-scan-scanner-twain-wia-api.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.ShockwaveFlashObjects">
+      <HintPath>..\..\..\..\downloading\SWF_in_CSharp\SWF_in_CSharp\SWF_in_CSharp\bin\Debug\AxInterop.ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\bin\updates\Bunifu_UI_1.5\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Snap.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Snap.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Snap.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WIA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.WIA.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="metroframework">
+      <HintPath>..\..\..\repaircd\control division\control division\bin\SystemC.D\metroframework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.SmoMetadataProvider, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TwainLib">
+      <HintPath>..\..\..\repaircd\control division\control division\bin\C.D management system\TwainLib.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLS_FRMS\CLSATTENDENCE.cs" />
+    <Compile Include="CLS_FRMS\CLSBARCODESYSTEM.cs" />
+    <Compile Include="CLS_FRMS\CLSCARS.cs" />
+    <Compile Include="CLS_FRMS\CLSCARSOPERATIONS.cs" />
+    <Compile Include="CLS_FRMS\CLSCONSTENTRY.cs" />
+    <Compile Include="CLS_FRMS\CLSEMPLOYEES.cs" />
+    <Compile Include="CLS_FRMS\CLSRPCARSOPERATIONS.cs" />
+    <Compile Include="CLS_FRMS\CLS_BookReciveInternal.cs" />
+    <Compile Include="CLS_FRMS\CLS_FUEL.cs" />
+    <Compile Include="CLS_FRMS\CLS_RPATTENDENCE.cs" />
+    <Compile Include="CLS_FRMS\CLS_RPCARS.cs" />
+    <Compile Include="CLS_FRMS\CLS_RPFUEL.cs" />
+    <Compile Include="CLS_FRMS\CLS_Synchornization.cs" />
+    <Compile Include="CLS_FRMS\CLS_UsersAndPermissions.cs" />
+    <Compile Include="CLS_FRMS\ProcessingDataBase.cs" />
+    <Compile Include="CLS_FRMS\RPEMPEMPLOYEES.cs" />
+    <Compile Include="CLS_FRMS\Treeandthatyia.cs" />
+    <Compile Include="CLS_FRMS\WorkingProperties.cs" />
+    <Compile Include="CLS_OTHER\CircleButtons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CLS_OTHER\CustomeGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="DAL\SqlController.cs" />
+    <Compile Include="DS\DataSetCars.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCars.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DataSetMechanisms.cs">
+      <DependentUpon>DataSetMechanisms.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DataSetMechanisms.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMechanisms.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DataSetThatyia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetThatyia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMbackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMbackup.Designer.cs">
+      <DependentUpon>FRMbackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMBARCODESYSTEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMBARCODESYSTEM.Designer.cs">
+      <DependentUpon>FRMBARCODESYSTEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMBookReciveInternal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMBookReciveInternal.Designer.cs">
+      <DependentUpon>FRMBookReciveInternal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMCARS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMCARS.Designer.cs">
+      <DependentUpon>FRMCARS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMCARSOPERATIONS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMCARSOPERATIONS.Designer.cs">
+      <DependentUpon>FRMCARSOPERATIONS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMCONST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMCONST.Designer.cs">
+      <DependentUpon>FRMCONST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMDisplayEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMDisplayEmployees.Designer.cs">
+      <DependentUpon>FRMDisplayEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMEMPLOYEES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMEMPLOYEES.Designer.cs">
+      <DependentUpon>FRMEMPLOYEES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMEntryFuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMEntryFuel.Designer.cs">
+      <DependentUpon>FRMEntryFuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELPRICE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELPRICE.Designer.cs">
+      <DependentUpon>FRMFUELPRICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMnotifc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMnotifc.Designer.cs">
+      <DependentUpon>FRMnotifc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMRPATTENDENCE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMRPATTENDENCE.Designer.cs">
+      <DependentUpon>FRMRPATTENDENCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMRPCAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMRPCAR.Designer.cs">
+      <DependentUpon>FRMRPCAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMRPEMPEMPLOYEES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMRPEMPEMPLOYEES.Designer.cs">
+      <DependentUpon>FRMRPEMPEMPLOYEES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMATTENDENCE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMATTENDENCE.Designer.cs">
+      <DependentUpon>FRMATTENDENCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMRPFUEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMRPFUEL.Designer.cs">
+      <DependentUpon>FRMRPFUEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMSignature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMSignature.Designer.cs">
+      <DependentUpon>FRMSignature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMSynchornization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMSynchornization.Designer.cs">
+      <DependentUpon>FRMSynchornization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMThatyiaProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMThatyiaProperties.Designer.cs">
+      <DependentUpon>FRMThatyiaProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRM_SETTING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRM_SETTING.Designer.cs">
+      <DependentUpon>FRM_SETTING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRM_USERS_PERMISSIONS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRM_USERS_PERMISSIONS.Designer.cs">
+      <DependentUpon>FRM_USERS_PERMISSIONS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\Guidthatyia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\Guidthatyia.Designer.cs">
+      <DependentUpon>Guidthatyia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\keyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\keyboard.Designer.cs">
+      <DependentUpon>keyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\MAINFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\MAINFRM.Designer.cs">
+      <DependentUpon>MAINFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTSCAR\DivBook.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\DivBook.Designer.cs">
+      <DependentUpon>DivBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DriverHoursSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DriverHoursSummary.Designer.cs">
+      <DependentUpon>M_DriverHoursSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarHoursSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarHoursSummary.Designer.cs">
+      <DependentUpon>M_CarHoursSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DriverHours.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DriverHours.Designer.cs">
+      <DependentUpon>M_DriverHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarHours.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarHours.Designer.cs">
+      <DependentUpon>M_CarHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TankerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TankerSummary.Designer.cs">
+      <DependentUpon>M_TankerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DistenationSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DistenationSummary.Designer.cs">
+      <DependentUpon>M_DistenationSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_BeneficiarySummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_BeneficiarySummary.Designer.cs">
+      <DependentUpon>M_BeneficiarySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAccident2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAccident2.Designer.cs">
+      <DependentUpon>CarAccident2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAccident1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAccident1.Designer.cs">
+      <DependentUpon>CarAccident1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarCounters.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarCounters.Designer.cs">
+      <DependentUpon>CarCounters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarDistance2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarDistance2.Designer.cs">
+      <DependentUpon>CarDistance2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarDistance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarDistance.Designer.cs">
+      <DependentUpon>CarDistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAdvisor4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAdvisor4.Designer.cs">
+      <DependentUpon>CarAdvisor4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAdvisor2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAdvisor2.Designer.cs">
+      <DependentUpon>CarAdvisor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAdvisor1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarAdvisor1.Designer.cs">
+      <DependentUpon>CarAdvisor1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarSituations2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarSituations2.Designer.cs">
+      <DependentUpon>CarSituations2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarSituations1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\CarSituations1.Designer.cs">
+      <DependentUpon>CarSituations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndDriverName.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndDriverName.Designer.cs">
+      <DependentUpon>M_TheTypeAndDriverName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndDistenation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndDistenation.Designer.cs">
+      <DependentUpon>M_TheTypeAndDistenation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndCar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndCar.Designer.cs">
+      <DependentUpon>M_TheTypeAndCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarType2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarType2.Designer.cs">
+      <DependentUpon>M_CarType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarType.Designer.cs">
+      <DependentUpon>M_CarType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndBeneficiary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheTypeAndBeneficiary.Designer.cs">
+      <DependentUpon>M_TheTypeAndBeneficiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheType.Designer.cs">
+      <DependentUpon>M_TheType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheBeneficiary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_TheBeneficiary.Designer.cs">
+      <DependentUpon>M_TheBeneficiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_Distenation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_Distenation.Designer.cs">
+      <DependentUpon>M_Distenation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DriverName.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_DriverName.Designer.cs">
+      <DependentUpon>M_DriverName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_MovementBetween.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_MovementBetween.Designer.cs">
+      <DependentUpon>M_MovementBetween.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarNoBetween1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarNoBetween1.Designer.cs">
+      <DependentUpon>M_CarNoBetween1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarNoBetween.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\M_CarNoBetween.Designer.cs">
+      <DependentUpon>M_CarNoBetween.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelCarBetweenTowDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelCarBetweenTowDate.Designer.cs">
+      <DependentUpon>FuelCarBetweenTowDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelSummaryCarNo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelSummaryCarNo.Designer.cs">
+      <DependentUpon>FuelSummaryCarNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelSummary.Designer.cs">
+      <DependentUpon>FuelSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelBetweenTowDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\FuelBetweenTowDate.Designer.cs">
+      <DependentUpon>FuelBetweenTowDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocumentTest2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocumentTest2.Designer.cs">
+      <DependentUpon>PrintDocumentTest2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocumentTest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocumentTest.Designer.cs">
+      <DependentUpon>PrintDocumentTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocumentNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocumentNew.Designer.cs">
+      <DependentUpon>PrintDocumentNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocument2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocument2.Designer.cs">
+      <DependentUpon>PrintDocument2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTSCAR\PrintDocument.Designer.cs">
+      <DependentUpon>PrintDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\AttenByDaley.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\AttenByDaley.Designer.cs">
+      <DependentUpon>AttenByDaley.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\AttenByEmpName.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\AttenByEmpName.Designer.cs">
+      <DependentUpon>AttenByEmpName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\AttenByWorkType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\AttenByWorkType.Designer.cs">
+      <DependentUpon>AttenByWorkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\Attendence.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\Attendence.Designer.cs">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarDocument.Designer.cs">
+      <DependentUpon>CarDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByCo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByCo.Designer.cs">
+      <DependentUpon>CarsByCo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByCoAndModel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByCoAndModel.Designer.cs">
+      <DependentUpon>CarsByCoAndModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByFuel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByFuel.Designer.cs">
+      <DependentUpon>CarsByFuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByState.Designer.cs">
+      <DependentUpon>CarsByState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByStateAndModel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByStateAndModel.Designer.cs">
+      <DependentUpon>CarsByStateAndModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTireSize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTireSize.Designer.cs">
+      <DependentUpon>CarsByTireSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByType.Designer.cs">
+      <DependentUpon>CarsByType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTypeAndDept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTypeAndDept.Designer.cs">
+      <DependentUpon>CarsByTypeAndDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTypeAndModel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTypeAndModel.Designer.cs">
+      <DependentUpon>CarsByTypeAndModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\ConstracAttention.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\ConstracAttention.Designer.cs">
+      <DependentUpon>ConstracAttention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\ConstractsBetweenTowDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\ConstractsBetweenTowDate.Designer.cs">
+      <DependentUpon>ConstractsBetweenTowDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmpAllVar2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmpAllVar2.Designer.cs">
+      <DependentUpon>EmpAllVar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmpAllVar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmpAllVar.Designer.cs">
+      <DependentUpon>EmpAllVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmpDocRP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmpDocRP.Designer.cs">
+      <DependentUpon>EmpDocRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeeByDivisionAndSheft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeeByDivisionAndSheft.Designer.cs">
+      <DependentUpon>EmployeeByDivisionAndSheft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByWorkingPlace.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByWorkingPlace.Designer.cs">
+      <DependentUpon>EmployeesByWorkingPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesVariableComming.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesVariableComming.Designer.cs">
+      <DependentUpon>EmployeesVariableComming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmpVarNotComming.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmpVarNotComming.Designer.cs">
+      <DependentUpon>EmpVarNotComming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesVariableGo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesVariableGo.Designer.cs">
+      <DependentUpon>EmployeesVariableGo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\Purchases_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\Purchases_Print.Designer.cs">
+      <DependentUpon>Purchases_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\RPDisputches.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\RPDisputches.Designer.cs">
+      <DependentUpon>RPDisputches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummaryBeneficiary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummaryBeneficiary.Designer.cs">
+      <DependentUpon>SummaryBeneficiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummaryWorkPlace.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummaryWorkPlace.Designer.cs">
+      <DependentUpon>SummaryWorkPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummaryType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummaryType.Designer.cs">
+      <DependentUpon>SummaryType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummaryJobs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummaryJobs.Designer.cs">
+      <DependentUpon>SummaryJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummarySitu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummarySitu.Designer.cs">
+      <DependentUpon>SummarySitu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesFamilyInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesFamilyInfo.Designer.cs">
+      <DependentUpon>EmployeesFamilyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesStudy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesStudy.Designer.cs">
+      <DependentUpon>EmployeesStudy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesMobile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesMobile.Designer.cs">
+      <DependentUpon>EmployeesMobile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesLive.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesLive.Designer.cs">
+      <DependentUpon>EmployeesLive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesZam2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesZam2.Designer.cs">
+      <DependentUpon>EmployeesZam2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesZam1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesZam1.Designer.cs">
+      <DependentUpon>EmployeesZam1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesZam.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesZam.Designer.cs">
+      <DependentUpon>EmployeesZam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeeTaghweel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeeTaghweel.Designer.cs">
+      <DependentUpon>EmployeeTaghweel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeeWorkTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeeWorkTime.Designer.cs">
+      <DependentUpon>EmployeeWorkTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByUnit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByUnit.Designer.cs">
+      <DependentUpon>EmployeesByUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByType.Designer.cs">
+      <DependentUpon>EmployeesByType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByJob.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByJob.Designer.cs">
+      <DependentUpon>EmployeesByJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByDivision.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesByDivision.Designer.cs">
+      <DependentUpon>EmployeesByDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesBySitu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesBySitu.Designer.cs">
+      <DependentUpon>EmployeesBySitu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummryCarByType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummryCarByType.Designer.cs">
+      <DependentUpon>SummryCarByType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummryCarsByDepartment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummryCarsByDepartment.Designer.cs">
+      <DependentUpon>SummryCarsByDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SumryCarByDiv.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SumryCarByDiv.Designer.cs">
+      <DependentUpon>SumryCarByDiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\Tanseeb2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\Tanseeb2.Designer.cs">
+      <DependentUpon>Tanseeb2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\Tanseeb1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\Tanseeb1.Designer.cs">
+      <DependentUpon>Tanseeb1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesHolydayByDivision.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesHolydayByDivision.Designer.cs">
+      <DependentUpon>EmployeesHolydayByDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesHolyday.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesHolyday.Designer.cs">
+      <DependentUpon>EmployeesHolyday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesChildren.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesChildren.Designer.cs">
+      <DependentUpon>EmployeesChildren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesAdministrations2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesAdministrations2.Designer.cs">
+      <DependentUpon>EmployeesAdministrations2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesAdministrations.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\EmployeesAdministrations.Designer.cs">
+      <DependentUpon>EmployeesAdministrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\UnitsCount .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\UnitsCount .Designer.cs">
+      <DependentUpon>UnitsCount .cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\DivisionCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\DivisionCount.Designer.cs">
+      <DependentUpon>DivisionCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\ReportsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTS\ReportsViewer.Designer.cs">
+      <DependentUpon>ReportsViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\RPCARSOPERATIONS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTS\RPCARSOPERATIONS.Designer.cs">
+      <DependentUpon>RPCARSOPERATIONS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\Cars.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\Cars.Designer.cs">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\DC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\DC.Designer.cs">
+      <DependentUpon>DC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\NumClick.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\NumClick.Designer.cs">
+      <DependentUpon>NumClick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\test.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Num.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Num.Designer.cs">
+      <DependentUpon>User_Num.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FRMS\FRMbackup.resx">
+      <DependentUpon>FRMbackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMBARCODESYSTEM.resx">
+      <DependentUpon>FRMBARCODESYSTEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMBookReciveInternal.resx">
+      <DependentUpon>FRMBookReciveInternal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMCARS.resx">
+      <DependentUpon>FRMCARS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMCARSOPERATIONS.resx">
+      <DependentUpon>FRMCARSOPERATIONS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMCONST.resx">
+      <DependentUpon>FRMCONST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMDisplayEmployees.resx">
+      <DependentUpon>FRMDisplayEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMEMPLOYEES.resx">
+      <DependentUpon>FRMEMPLOYEES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMEntryFuel.resx">
+      <DependentUpon>FRMEntryFuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMFUELPRICE.resx">
+      <DependentUpon>FRMFUELPRICE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMnotifc.resx">
+      <DependentUpon>FRMnotifc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMRPATTENDENCE.resx">
+      <DependentUpon>FRMRPATTENDENCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMRPCAR.resx">
+      <DependentUpon>FRMRPCAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMRPEMPEMPLOYEES.resx">
+      <DependentUpon>FRMRPEMPEMPLOYEES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMATTENDENCE.resx">
+      <DependentUpon>FRMATTENDENCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMRPFUEL.resx">
+      <DependentUpon>FRMRPFUEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMSignature.resx">
+      <DependentUpon>FRMSignature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMSynchornization.resx">
+      <DependentUpon>FRMSynchornization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMThatyiaProperties.resx">
+      <DependentUpon>FRMThatyiaProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRM_SETTING.resx">
+      <DependentUpon>FRM_SETTING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRM_USERS_PERMISSIONS.resx">
+      <DependentUpon>FRM_USERS_PERMISSIONS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\Guidthatyia.resx">
+      <DependentUpon>Guidthatyia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\keyboard.resx">
+      <DependentUpon>keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\MAINFRM.resx">
+      <DependentUpon>MAINFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORTSCAR\DivBook.resx">
+      <DependentUpon>DivBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_DriverHoursSummary.resx">
+      <DependentUpon>M_DriverHoursSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_CarHoursSummary.resx">
+      <DependentUpon>M_CarHoursSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_DriverHours.resx">
+      <DependentUpon>M_DriverHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_CarHours.resx">
+      <DependentUpon>M_CarHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_TankerSummary.resx">
+      <DependentUpon>M_TankerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_DistenationSummary.resx">
+      <DependentUpon>M_DistenationSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_BeneficiarySummary.resx">
+      <DependentUpon>M_BeneficiarySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarAccident2.resx">
+      <DependentUpon>CarAccident2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarAccident1.resx">
+      <DependentUpon>CarAccident1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarCounters.resx">
+      <DependentUpon>CarCounters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarDistance2.resx">
+      <DependentUpon>CarDistance2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarDistance.resx">
+      <DependentUpon>CarDistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarAdvisor4.resx">
+      <DependentUpon>CarAdvisor4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarAdvisor2.resx">
+      <DependentUpon>CarAdvisor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarAdvisor1.resx">
+      <DependentUpon>CarAdvisor1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarSituations2.resx">
+      <DependentUpon>CarSituations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\CarSituations1.resx">
+      <DependentUpon>CarSituations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_TheTypeAndDriverName.resx">
+      <DependentUpon>M_TheTypeAndDriverName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_TheTypeAndDistenation.resx">
+      <DependentUpon>M_TheTypeAndDistenation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_TheTypeAndCar.resx">
+      <DependentUpon>M_TheTypeAndCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_CarType2.resx">
+      <DependentUpon>M_CarType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_CarType.resx">
+      <DependentUpon>M_CarType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_TheTypeAndBeneficiary.resx">
+      <DependentUpon>M_TheTypeAndBeneficiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_TheType.resx">
+      <DependentUpon>M_TheType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_TheBeneficiary.resx">
+      <DependentUpon>M_TheBeneficiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_Distenation.resx">
+      <DependentUpon>M_Distenation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_DriverName.resx">
+      <DependentUpon>M_DriverName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_MovementBetween.resx">
+      <DependentUpon>M_MovementBetween.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_CarNoBetween1.resx">
+      <DependentUpon>M_CarNoBetween1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\M_CarNoBetween.resx">
+      <DependentUpon>M_CarNoBetween.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\FuelCarBetweenTowDate.resx">
+      <DependentUpon>FuelCarBetweenTowDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\FuelSummaryCarNo.resx">
+      <DependentUpon>FuelSummaryCarNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\FuelSummary.resx">
+      <DependentUpon>FuelSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\FuelBetweenTowDate.resx">
+      <DependentUpon>FuelBetweenTowDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\PrintDocumentTest2.resx">
+      <DependentUpon>PrintDocumentTest2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\PrintDocumentTest.resx">
+      <DependentUpon>PrintDocumentTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\PrintDocumentNew.resx">
+      <DependentUpon>PrintDocumentNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\PrintDocument2.resx">
+      <DependentUpon>PrintDocument2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTSCAR\PrintDocument.resx">
+      <DependentUpon>PrintDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\AttenByDaley.resx">
+      <DependentUpon>AttenByDaley.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\AttenByEmpName.resx">
+      <DependentUpon>AttenByEmpName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\AttenByWorkType.resx">
+      <DependentUpon>AttenByWorkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\Attendence.resx">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarDocument.resx">
+      <DependentUpon>CarDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByCo.resx">
+      <DependentUpon>CarsByCo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByCoAndModel.resx">
+      <DependentUpon>CarsByCoAndModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByFuel.resx">
+      <DependentUpon>CarsByFuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByState.resx">
+      <DependentUpon>CarsByState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByStateAndModel.resx">
+      <DependentUpon>CarsByStateAndModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByTireSize.resx">
+      <DependentUpon>CarsByTireSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByType.resx">
+      <DependentUpon>CarsByType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByTypeAndDept.resx">
+      <DependentUpon>CarsByTypeAndDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByTypeAndModel.resx">
+      <DependentUpon>CarsByTypeAndModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\ConstracAttention.resx">
+      <DependentUpon>ConstracAttention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\ConstractsBetweenTowDate.resx">
+      <DependentUpon>ConstractsBetweenTowDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmpAllVar2.resx">
+      <DependentUpon>EmpAllVar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmpAllVar.resx">
+      <DependentUpon>EmpAllVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmpDocRP.resx">
+      <DependentUpon>EmpDocRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeeByDivisionAndSheft.resx">
+      <DependentUpon>EmployeeByDivisionAndSheft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesByWorkingPlace.resx">
+      <DependentUpon>EmployeesByWorkingPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesVariableComming.resx">
+      <DependentUpon>EmployeesVariableComming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmpVarNotComming.resx">
+      <DependentUpon>EmpVarNotComming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesVariableGo.resx">
+      <DependentUpon>EmployeesVariableGo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\Purchases_Print.resx">
+      <DependentUpon>Purchases_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\RPDisputches.resx">
+      <DependentUpon>RPDisputches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummaryBeneficiary.resx">
+      <DependentUpon>SummaryBeneficiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummaryWorkPlace.resx">
+      <DependentUpon>SummaryWorkPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummaryType.resx">
+      <DependentUpon>SummaryType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummaryJobs.resx">
+      <DependentUpon>SummaryJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummarySitu.resx">
+      <DependentUpon>SummarySitu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesFamilyInfo.resx">
+      <DependentUpon>EmployeesFamilyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesStudy.resx">
+      <DependentUpon>EmployeesStudy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesMobile.resx">
+      <DependentUpon>EmployeesMobile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesLive.resx">
+      <DependentUpon>EmployeesLive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesZam2.resx">
+      <DependentUpon>EmployeesZam2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesZam1.resx">
+      <DependentUpon>EmployeesZam1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesZam.resx">
+      <DependentUpon>EmployeesZam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeeTaghweel.resx">
+      <DependentUpon>EmployeeTaghweel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeeWorkTime.resx">
+      <DependentUpon>EmployeeWorkTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesByUnit.resx">
+      <DependentUpon>EmployeesByUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesByType.resx">
+      <DependentUpon>EmployeesByType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesByJob.resx">
+      <DependentUpon>EmployeesByJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesByDivision.resx">
+      <DependentUpon>EmployeesByDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesBySitu.resx">
+      <DependentUpon>EmployeesBySitu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummryCarByType.resx">
+      <DependentUpon>SummryCarByType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummryCarsByDepartment.resx">
+      <DependentUpon>SummryCarsByDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SumryCarByDiv.resx">
+      <DependentUpon>SumryCarByDiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\Tanseeb2.resx">
+      <DependentUpon>Tanseeb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\Tanseeb1.resx">
+      <DependentUpon>Tanseeb1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesHolydayByDivision.resx">
+      <DependentUpon>EmployeesHolydayByDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesHolyday.resx">
+      <DependentUpon>EmployeesHolyday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesChildren.resx">
+      <DependentUpon>EmployeesChildren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesAdministrations2.resx">
+      <DependentUpon>EmployeesAdministrations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\EmployeesAdministrations.resx">
+      <DependentUpon>EmployeesAdministrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\UnitsCount .resx">
+      <DependentUpon>UnitsCount .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\DivisionCount.resx">
+      <DependentUpon>DivisionCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\ReportsViewer.resx">
+      <DependentUpon>ReportsViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\RPCARSOPERATIONS.resx">
+      <DependentUpon>RPCARSOPERATIONS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\Cars.resx">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\DC.resx">
+      <DependentUpon>DC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\NumClick.resx">
+      <DependentUpon>NumClick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Num.resx">
+      <DependentUpon>User_Num.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DS\DataSetCars.xsc">
+      <DependentUpon>DataSetCars.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DataSetCars.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCars.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\DataSetCars.xss">
+      <DependentUpon>DataSetCars.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DataSetMechanisms.xsc">
+      <DependentUpon>DataSetMechanisms.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DataSetMechanisms.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMechanisms.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\DataSetMechanisms.xss">
+      <DependentUpon>DataSetMechanisms.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DataSetThatyia.xsc">
+      <DependentUpon>DataSetThatyia.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DataSetThatyia.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetThatyia.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\DataSetThatyia.xss">
+      <DependentUpon>DataSetThatyia.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RPTS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الاليات.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Traffic Jam_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Recovery_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Recovery_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Recovery_50px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept Database_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Backup_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Group Man Man_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car On Weight_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive Folder_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Combo Chart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings 3_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fruityth1ng-Stark-HD.ico" />
+    <Content Include="ReadMe-AspriseScan.txt" />
+    <None Include="Resources\نموذج المشتريات1.png" />
+    <None Include="Resources\عبد الجواد كاظم.jpg" />
+    <None Include="Resources\عبد الجواد كاظم عباس21.png" />
+    <None Include="Resources\عبد الجواد كاظم عباس.png" />
+    <None Include="Resources\نموذج المشتريات.png" />
+    <None Include="Resources\signature-icon.png" />
+    <None Include="Resources\media_repeat_inv.png" />
+    <None Include="Resources\sync_white_2048x2048.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\reminder_32x32.png" />
+    <None Include="Resources\txt.png" />
+    <None Include="Resources\video.png" />
+    <None Include="Resources\powerpoint.png" />
+    <None Include="Resources\audio.png" />
+    <None Include="Resources\pdf.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\word.png" />
+    <None Include="Resources\word_0.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\first.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\last.png" />
+    <None Include="Resources\white-arrow-png-24.png" />
+    <None Include="Resources\mini.jpg" />
+    <None Include="Resources\calculator.png" />
+    <None Include="Resources\fuel.png" />
+    <None Include="Resources\stores.png" />
+    <None Include="Resources\camera_32px.png" />
+    <None Include="Resources\edit_property_32px.png" />
+    <None Include="Resources\settings2_32px.png" />
+    <None Include="Resources\collapse_32px.png" />
+    <None Include="Resources\expand_32px.png" />
+    <None Include="Resources\edit_file_32px.png" />
+    <None Include="Resources\folder_32px.png" />
+    <None Include="Resources\folder_tree_32px.png" />
+    <None Include="Resources\delete_sign_48px.png" />
+    <None Include="Resources\delete_sign_32px.png" />
+    <None Include="Resources\plus_1_year_40px.png" />
+    <None Include="Resources\plus_math_32px.png" />
+    <None Include="Resources\Swirl_48px.png" />
+    <None Include="Resources\Sleeping in Bed_64px.png" />
+    <None Include="Resources\Synchronize_48px.png" />
+    <None Include="Resources\Synchronize_24px.png" />
+    <None Include="Resources\Scanner_32px.png" />
+    <None Include="Resources\Forpanel21.jpg" />
+    <None Include="Resources\Forpanel2.jpg" />
+    <None Include="Resources\Cancel_64px.png" />
+    <None Include="Resources\Cancel2_32px.png" />
+    <None Include="Resources\Watch Your Step_70px1.png" />
+    <None Include="Resources\Calendar_70px1.png" />
+    <None Include="Resources\User Male_70px1.png" />
+    <None Include="Resources\Delete_32px2.png" />
+    <None Include="Resources\Pencil Tip_32px.png" />
+    <None Include="Resources\Delete_32px.png" />
+    <None Include="Resources\Save_32px.png" />
+    <None Include="Resources\Plus_32px.png" />
+    <None Include="Resources\الاليات1.png" />
+    <None Include="Resources\Books_75px1.png" />
+    <None Include="Resources\Book Shelf_75px.png" />
+    <None Include="Resources\System Task_75px.png" />
+    <None Include="Resources\User Credentials_75px1.png" />
+    <None Include="Resources\Services_75px.png" />
+    <None Include="Resources\Queue_75px.png" />
+    <None Include="Resources\Basilica_75px.png" />
+    <None Include="Resources\Cathedral_75px.png" />
+    <None Include="Resources\Type_75px.png" />
+    <None Include="Resources\Exit_75px2.png" />
+    <None Include="Resources\Data Backup_75px2.png" />
+    <None Include="Resources\Variable_70px.png" />
+    <None Include="Resources\Bar Chart_70px.png" />
+    <None Include="Resources\Calendar_70px.png" />
+    <None Include="Resources\Watch Your Step_70px.png" />
+    <None Include="Resources\User Male_70px.png" />
+    <None Include="Resources\User Groups_70px.png" />
+    <None Include="Resources\Carpool_75px.png" />
+    <None Include="Resources\Crashed Car_75px1.png" />
+    <None Include="Resources\Gas Station_75px1.png" />
+    <None Include="Resources\Speedometer_75px.png" />
+    <None Include="Resources\Interstate Truck_75px1.png" />
+    <None Include="Resources\Traffic Jam_75px1.png" />
+    <None Include="Resources\Gas Station_70px.png" />
+    <None Include="Resources\Crashed Car_70px.png" />
+    <None Include="Resources\Combo Chart_70px1.png" />
+    <None Include="Resources\Car_70px.png" />
+    <None Include="Resources\Combo Chart_70px.png" />
+    <None Include="Resources\Menu_32px.png" />
+    <None Include="Resources\WinRAR_32px.png" />
+    <None Include="Resources\Book Shelf_32px.png" />
+    <None Include="Resources\Select All_32px.png" />
+    <None Include="Resources\Settings_32px.png" />
+    <None Include="Resources\Taxi_32px.png" />
+    <None Include="Resources\Conference Foreground Selected_32px.png" />
+    <None Include="Resources\Home_32px.png" />
+    <None Include="Resources\error-3-32.ico" />
+    <None Include="Resources\Overtime_75px1.png" />
+    <None Include="Resources\User Credentials_75px.png" />
+    <None Include="Resources\Settings 3_75px.png" />
+    <None Include="Resources\Monitor_32px.png" />
+    <None Include="Resources\Monitor_75px.png" />
+    <None Include="Resources\Bar Chart_75px1.png" />
+    <None Include="Resources\Car On Weight_75px.png" />
+    <None Include="Resources\Crashed Car_75px.png" />
+    <None Include="Resources\Gas Station_75px.png" />
+    <None Include="Resources\Speed_75px.png" />
+    <None Include="Resources\Interstate Truck_75px.png" />
+    <None Include="Resources\Traffic Jam_75px.png" />
+    <None Include="Resources\Bar Chart_75px.png" />
+    <None Include="Resources\Variable_75px.png" />
+    <None Include="Resources\Overtime_75px.png" />
+    <None Include="Resources\Watch Your Step_75px.png" />
+    <None Include="Resources\Billie Holiday_75px1.png" />
+    <None Include="Resources\Billie Holiday_75px.png" />
+    <None Include="Resources\Group Background Selected_75px.png" />
+    <None Include="Resources\Book_75px.png" />
+    <None Include="Resources\Books_75px.png" />
+    <None Include="Resources\Exit_75px1.png" />
+    <None Include="Resources\Data Protection_75px.png" />
+    <None Include="Resources\Data Backup_75px1.png" />
+    <None Include="Resources\Taj Mahal_75px.png" />
+    <None Include="Resources\Conference_75px.png" />
+    <None Include="Resources\Kindle_75px.png" />
+    <None Include="Resources\Parliament_75px.png" />
+    <None Include="Resources\Exit_75px.png" />
+    <None Include="Resources\Add Database_75px.png" />
+    <None Include="Resources\Add Database_75px1.png" />
+    <None Include="Resources\Airplane Take Off_75px.png" />
+    <None Include="Resources\Archive Folder_32px1.png" />
+    <None Include="Resources\Airplane Mode On_70px.png" />
+    <None Include="Resources\Add Database_75px2.png" />
+    <None Include="Resources\Appointment Reminders_64px.png" />
+    <None Include="Resources\9 %281%29.gif" />
+    <None Include="Resources\Add User Group Man Man_45px.png" />
+    <None Include="Resources\Add Database_75px3.png" />
+    <None Include="Resources\2048.png" />
+    <None Include="Resources\2عبد الجواد كاظم عباس.png" />
+    <None Include="Resources\3عبد الجواد كاظم عباس.png" />
+    <Content Include="Resources\asprise.ico" />
+    <None Include="Resources\List_52px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
